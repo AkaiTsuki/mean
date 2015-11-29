@@ -1,4 +1,8 @@
+# Intellij files
 .idea
 *.iml
 
 */node_modules
+
+# mongodb data directory
+databases/mongo/data
