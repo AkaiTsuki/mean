@@ -21,6 +21,16 @@
 
             return deferred.promise;
         };
+
+        me.loadAllSprints = function(){
+            var deferred = $q.defer();
+
+            $http.get('/sprint/list').success(function (data, status) {
+                deferred.resolve(data);
+            });
+
+            return deferred.promise;
+        }
     }];
 
     angular.module('scrumNote').service('SprintService', sprintService);

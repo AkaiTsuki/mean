@@ -16,14 +16,8 @@
                         }
                     },
                     resolve: {
-                        sprints: function ($http, $q) {
-                            var deferred = $q.defer();
-
-                            $http.get('/sprint/list').success(function (data, status) {
-                                deferred.resolve(data);
-                            });
-
-                            return deferred.promise;
+                        sprints: function (SprintService) {
+                            return SprintService.loadAllSprints();
                         }
                     }
                 })
