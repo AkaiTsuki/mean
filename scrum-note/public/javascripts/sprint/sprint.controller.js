@@ -9,8 +9,7 @@
 
         $scope.createSprint = function(){
             SprintService.createSprint($scope.sprint).then(function(savedSprint){
-                console.log(savedSprint);
-                $state.go('home');
+                $state.transitionTo('home', null, {reload: true});
             });
         }
 
