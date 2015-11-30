@@ -11,8 +11,8 @@
                     url: '/home',
                     views: {
                         'main@': {
-                            templateUrl: '/templates/sprint.list.html',
-                            controller: 'SprintHomeController'
+                            templateUrl: '/templates/sprint/sprint.list.html',
+                            controller: 'SprintController'
                         }
                     },
                     resolve: {
@@ -27,35 +27,14 @@
                         }
                     }
                 })
-                .state('create', {
+                .state('home.create', {
                     url: '/create',
                     views: {
                         'main@': {
-                            templateUrl: '/templates/sprint.create.html',
+                            templateUrl: '/templates/sprint/sprint.create.html',
                             controller: 'SprintController'
                         }
                     }
-                }).state('create.submit', {});
-        })
-        .controller('SprintController', ['$state', '$http', '$scope', '$q', function ($state, $http, $scope, $q) {
-            $scope.sprint = {};
-
-            $scope.createSprint = function () {
-                var sprint = $scope.sprint;
-
-                var data = {
-                    sprint: sprint
-                };
-
-                $http.post('/sprint/create', data).success(function (data, status) {
-                    console.log(data);
-                    $state.go('home');
                 });
-            };
-
-        }])
-        .controller('SprintHomeController', ['$scope', 'sprints', function ($scope, sprints) {
-            console.log('SprintHomeController');
-            $scope.sprints=  sprints;
-        }]);
+        });
 })();

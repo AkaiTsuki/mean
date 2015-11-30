@@ -6,7 +6,7 @@ block content
             small Manage your sprint quick and easy
 
         section.menu
-            a(ui-sref='create' class="btn btn-primary") create
+            a(ui-sref='home.create' class="btn btn-primary") create
 
         section(ui-view="main")
 
@@ -14,3 +14,5 @@ block content
     script(src='/javascripts/lib/angular-ui-router.js')
     script(src='/javascripts/lib/ui-bootstrap-tpls-0.14.3.min.js')
     script(src='/javascripts/app.js')
+    script(src='/javascripts/sprint/sprint.controller.js')
+    script(src='/javascripts/sprint/sprint.service.js')
