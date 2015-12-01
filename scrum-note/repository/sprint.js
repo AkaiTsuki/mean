@@ -8,9 +8,13 @@ mongoose.connect('mongodb://localhost/scrumNote');
 var Schema = mongoose.Schema;
 
 var sprintSchema = new Schema({
-    name: String,
+    goal: String,
+    tryThis: String,
     createDate: Date,
-    updateDate: Date
+    updateDate: Date,
+    startDate: Date,
+    endDate: Date,
+    status: String
 });
 
 sprintSchema.pre('save', function (next) {

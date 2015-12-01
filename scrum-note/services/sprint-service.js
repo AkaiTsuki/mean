@@ -5,9 +5,19 @@ var Sprint = require('../repository/sprint');
 
 var sprintService = function () {
 
+    var SPRINT_STATUS = {
+        PENDING: 'PENDING',
+        START: 'START',
+        END: 'END',
+        SUCCESS: 'SUCCESS',
+        FAIL: 'FAIL'
+    };
+
     function __saveSprint(sprintDto, callback) {
         var sprint = new Sprint({
-            name: sprintDto.name
+            goal: sprintDto.goal,
+            tryThis: sprintDto.tryThis,
+            status: SPRINT_STATUS.PENDING
         });
 
         sprint.save(function (err) {
