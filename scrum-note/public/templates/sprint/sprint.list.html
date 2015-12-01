@@ -1,0 +1,24 @@
+<h3>All Sprints</h3>
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Goal</th>
+        <th>Try This</th>
+        <th>Status</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="sprint in sprints">
+        <td>{{sprint._id}}</td>
+        <td>{{sprint.goal}}</td>
+        <td>{{sprint.tryThis}}</td>
+        <td>{{sprint.status}}</td>
+        <td>{{sprint.startDate}}</td>
+        <td>{{sprint.endDate}}</td>
+    </tr>
+    </tbody>
+</table>

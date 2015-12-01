@@ -1,0 +1,13 @@
+<h3>Create A Sprint <small>Please input the following information</small></h3>
+<form>
+    <div class="form-group">
+        <label for="goal">Sprint Goal</label>
+        <input type="text" class="form-control" id="goal" placeholder="A goal to achieve during this sprint" ng-model="sprint.goal">
+    </div>
+    <div class="form-group">
+        <label for="tryThis">Try-This</label>
+        <input type="text" class="form-control" id="tryThis" placeholder="All team members commit to do so in order to make a better sprint" ng-model="sprint.tryThis">
+    </div>
+    <button ng-click="createSprint()" class="btn btn-default">Submit</button>
+    <a ui-sref="home" class="btn btn-info">Cancel</a>
+</form>
