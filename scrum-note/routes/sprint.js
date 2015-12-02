@@ -5,10 +5,6 @@ var express = require('express');
 var router = express.Router();
 var sprintService = require('../services/sprint-service');
 
-router.get('/', function(req, res, next){
-    res.render('sprint', { title: 'Sprint Overview' });
-});
-
 router.get('/list', function(req, res, next){
     sprintService.listSprints(function(sprints){
         res.json(sprints);
