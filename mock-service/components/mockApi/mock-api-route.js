@@ -18,5 +18,12 @@ router.post('/create', function (req, res, next) {
     });
 });
 
+router.post('/query', function(req, res){
+    var query = req.body;
+    mockApiService.queryMockData(query.url, query.method, function (mockData) {
+        res.json(mockData);
+    });
+});
+
 module.exports = router;
 

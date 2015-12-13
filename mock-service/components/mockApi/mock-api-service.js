@@ -6,6 +6,18 @@ var MockApi = require('./mock-api-domain');
 
 var MockApiService = function () {
 
+    function _queryMockData(url, method, callback){
+        MockApi.find({apiUrl: url, apiMethod: method}, function (err, mockApis) {
+            if (err) throw err;
+
+            if(mockApis.length == 0){
+                callback({});
+            }else {
+                callback(mockApis[0].mockData);
+            }
+        });
+    }
+
     function _saveMockApi(mockApiDto, callback) {
         var mockApi = new MockApi({
             apiUrl: mockApiDto.apiUrl,
@@ -40,7 +52,8 @@ var MockApiService = function () {
 
     return {
         saveMockApi: _saveMockApi,
-        listAll: _listAll
+        listAll: _listAll,
+        queryMockData: _queryMockData
     };
 };
 
