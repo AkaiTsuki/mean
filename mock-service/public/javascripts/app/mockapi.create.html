@@ -1,0 +1,22 @@
+<h3>Create A Mock API <small>Please input the following information</small></h3>
+<form>
+    <div class="form-group">
+        <label for="url">API URL</label>
+        <input type="text" class="form-control" id="url" placeholder="Rest url for mock api" ng-model="mockApi.apiUrl">
+    </div>
+    <div class="form-group">
+        <label for="method">HTTP Method</label>
+        <select class="form-control" id="method" ng-model="mockApi.apiMethod">
+            <option>GET</option>
+            <option>POST</option>
+            <option>PUT</option>
+            <option>DELETE</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="mockData">Mock Data</label>
+        <textarea rows="15" class="form-control" id="mockData" placeholder="Mock data returned by this api" ng-model="mockApi.mockData"></textarea>
+    </div>
+    <button ng-click="createMockApi()" class="btn btn-default">Submit</button>
+    <a ui-sref="home" class="btn btn-info">Cancel</a>
+</form>
