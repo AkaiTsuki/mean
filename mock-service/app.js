@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var mockApiRoute = require('./components/mockApi/mock-api-route');
+var mockServiceRoute = require('./components/mockService/mock-router');
 
 var app = express();
 
@@ -26,6 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/users', users);
 app.use('/mockApi', mockApiRoute);
+app.use('/services', mockServiceRoute);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

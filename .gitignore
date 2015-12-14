@@ -5,4 +5,5 @@
 */node_modules
 
 # mongodb data directory
-databases/mongo/data
+databases/mongo/scrum-note
+databases/mongo/mock-service
