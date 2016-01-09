@@ -5,25 +5,29 @@
     <title>Table of Content</title>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="/javascripts/ui-components/ui-components.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </head>
 <body class="container">
 <div class="row">
     <header-text text-content="UI Components" font-size="large" ></header-text>
 
-    <div class="panel panel-default">
-        <div class="panel-heading">Header Text</div>
-        <div class="panel-body">
-            <header-text text-content="Head Text Large Text Align Center" font-size="large" text-align="center"></header-text>
-            <header-text text-content="Head Text Medium" font-size="medium"></header-text>
-            <header-text text-content="Head Text Small" font-size="small"></header-text>
-            <header-text text-content="Head Text 10pt" font-size="10pt"></header-text>
-            <header-text text-content="Head Text 12pt" font-size="12pt"></header-text>
-            <header-text text-content="Head Text 16pt, align center" font-size="16pt" text-align="center"></header-text>
-            <header-text text-content="Head Text 16pt, align center by directive" font-size="16pt" text-center></header-text>
-        </div>
-    </div>
+    <page title="Header Text Directive" current="1" total="10" display-footer="true">
+        <header-text text-content="Head Text Large Text Align Center" font-size="large" text-align="center"></header-text>
+        <header-text text-content="Head Text Medium" font-size="medium"></header-text>
+        <header-text text-content="Head Text Small" font-size="small"></header-text>
+        <header-text text-content="Head Text 10pt" font-size="10pt"></header-text>
+        <header-text text-content="Head Text 12pt" font-size="12pt"></header-text>
+        <header-text text-content="Head Text 16pt, align center" font-size="16pt" text-align="center"></header-text>
+        <header-text text-content="Head Text 16pt, align center by directive" font-size="16pt" text-center></header-text>
+    </page>
 
+    <page title="Page Directive" current="2" total="10"  display-footer="true">
+        This panel is a page.
+        <page title="Nest Page">
+            Page can be nested in a page
+        </page>
+    </page>
 
 </div>
 
@@ -34,6 +38,7 @@
 <script src="/javascripts/ui-components/smart-button/smart-button.js"></script>
 <script src="/javascripts/ui-components/header-text/header-text.directive.js"></script>
 <script src="/javascripts/ui-components/text-center/text-center.directive.js"></script>
+<script src="/javascripts/ui-components/page/page.directive.js"></script>
 
 </body>
 </html>

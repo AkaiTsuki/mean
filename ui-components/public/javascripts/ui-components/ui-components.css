@@ -1,3 +1,9 @@
+/*
+This file should defines all functional style to support components, functional style is those css that tied to
+business logic. THe appearance style should define in its own theme css file
+*/
+
+/* Header Text Styles */
 .header-text-font-size-large {
     font-size: 32pt;
 }
