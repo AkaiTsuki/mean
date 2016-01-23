@@ -7,9 +7,9 @@ var data = [
 ];
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+//router.get('/', function(req, res, next) {
+//  res.render('index', { title: 'Express' });
+//});
 
 router.get('/api/comments', function(req, res, next){
   res.json(data);
